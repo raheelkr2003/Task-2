@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+<script>
+        // function isPalindrome(input) {
+//   let i = 0;
+//   let j = 0;
+//   let reverse = "";
+
+//   // Calculate the length of the input
+//   while (true) {
+//     if (input[j] === undefined) {
+//       break;
+//     }
+//     j++;
+//   }
+
+//   // Create the reverse string
+//   for (i = j - 1; i >= 0; i--) {
+//     reverse += input[i];
+//   }
+
+//   // Check if input and reverse are the same
+//   for (i = 0; i < j; i++) {
+//     if (input[i] !== reverse[i]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// // Test cases
+// console.log(isPalindrome("radar")); // true
+// console.log(isPalindrome("hello")); // false
+// console.log(isPalindrome("level")); // true
+
+// function findMinMax(arr) {
+//   let min = arr[0],
+//     max = arr[0];
+
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//       min = arr[i];
+//     }
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+
+//   return { min: min, max: max };
+// }
+
+// console.log(findMinMax([1, 2, 3, 4, 5])); // {min: 1, max: 5}
+// console.log(findMinMax([-1, -2, -3, -4, -5])); // {min: -5, max: -1}
+// console.log(findMinMax([0, 100, 200, 300, 400])); // {min: 0, max: 400}
+
+function findMissingNumber(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i + 1] - arr[i] !== 1) {
+      return arr[i] + 1;
+    }
+  }
+  return "No missing number";
+}
+function findMissingNumber(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i + 1] - arr[i] !== 1) {
+      return arr[i] + 1;
+    }
+  }
+  return "No missing number";
+}
+
+console.log(findMissingNumber([11, 12, 14, 15, 16, 18, 19, 20])); // 13
+console.log(findMissingNumber([1, 2, 3, 4, 6])); // 5
+console.log(findMissingNumber([10, 11, 12, 14])); // 13
+    </script>
+</body>
+</html>
